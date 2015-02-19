@@ -59,6 +59,10 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('charset')->end()
                     ->end()
                 ->end()
+                ->arrayNode('after')
+                    ->treatNullLike(array())
+                    ->prototype('scalar')->end()
+                    ->defaultValue(array())
             ->end();
 
         return $treeBuilder;

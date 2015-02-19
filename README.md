@@ -54,6 +54,8 @@ velikonja_labby:
       uploads: # you can define more different mappings
         src: example.com:/var/www/uploads/ # Mind the trailing slash
         dst: web/uploads/
+  after: [ 'fos:elastica:populate' ] # you can specify as many commands as you want
+ 
 ```
 
 **Use the command to sync**
